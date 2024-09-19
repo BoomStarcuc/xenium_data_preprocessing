@@ -112,20 +112,22 @@ def crop(image, label, output_dir):
         executor.map(process_cell, cell_ids)
 
 def main():
+    base_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE" # modify to your data dir
+    
     # Image info
-    img_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE/morphology_focus" # modify to your image dir
-    img_name = "morphology_focus_0000.ome.tif" # uesed image name (4 channels)
-    img_channel_names = ['DAPI', 'boundary', 'interior_RNA', 'interior_protein'] # determin the channel names according to image data
+    img_dir = os.path.join(base_dir, "morphology_focus") 
+    img_name = "morphology_focus_0000.ome.tif" # # modify to image name you use (4 channels)
+    img_channel_names = ['DAPI', 'boundary', 'interior_RNA', 'interior_protein'] # determin the channel names according to your image data
     uesed_img_channel = 1 # pick a channel that you want to crop
 
     # Label info
-    lbl_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE" # modify to your label dir
+    lbl_dir = base_dir
     lbl_name = "cells.zarr.zip" # used label name
     lbl_channel_names = ["nucseg", "cellseg"] # {channel 0: nucseg, channel 1: cellseg}
     used_lbl_channel = 1 # pick a label channel that corresponds to the image channel name you use
 
     # Output info
-    output_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE/preprocessing/{}".format(lbl_channel_names[used_lbl_channel]) # modify to your output dir
+    output_dir = "{}/preprocessing/{}".format(base_dir, lbl_channel_names[used_lbl_channel]) # modify to your output dir
     
     print("output_dir:", output_dir)
     if not os.path.exists(output_dir):
