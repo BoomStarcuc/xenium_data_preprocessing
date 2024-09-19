@@ -24,7 +24,7 @@ pip install -r requirements.txt
 ```
 
 ## Data Example
-In this repo, we used the [Xenium Human Pancreas]{https://www.10xgenomics.com/datasets/ffpe-human-pancreas-with-xenium-multimodal-cell-segmentation-1-standard} as an example. If you are applying this to other datasets, please review the corresponding documentation and adjust the relevant parameters in the provided scripts accordingly.
+In this repo, we used the [Xenium Human Pancreas](https://www.10xgenomics.com/datasets/ffpe-human-pancreas-with-xenium-multimodal-cell-segmentation-1-standard) as an example. If you are applying this to other datasets, please review the corresponding documentation and adjust the relevant parameters in the provided scripts accordingly.
 
 ## Crop whole tissue images into individual cell images
 
