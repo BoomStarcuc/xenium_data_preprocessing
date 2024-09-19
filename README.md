@@ -30,3 +30,5 @@ To run the algorithm on your data, use:
 ```
 python crop_img.py
 ```
+
+where ```img_dir```, ```img_name```, ```img_channel_names```, ```uesed_img_channel```, ```lbl_dir```, ```lbl_name```, and ```lbl_channel_names```, and ```used_lbl_channel``` in this ```crop_img.py``` need to be modified to your corresponding path, name, and specific channel.
