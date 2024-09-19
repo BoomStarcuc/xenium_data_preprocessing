@@ -5,19 +5,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def img_sharp(img, channel_name):
-    if channel_name == 'DAPI':
-        # Apply Channel Intensity Threshold (e.g., 0 to 3288)
-        min_threshold = 0
-        max_threshold = 3288
-    elif channel_name == 'boundary':
-        min_threshold = 0
-        max_threshold = 5783
-    elif channel_name == 'interior_RNA':
-        min_threshold = 0
-        max_threshold = 7375
-    else:
-        min_threshold = 0
-        max_threshold = 4759
+    # Define thresholds for each channel, which is defined based on Xenium Explorer 2 software 
+    thresholds = {
+        'DAPI': (0, 3288),
+        'boundary': (0, 5783),
+        'interior_RNA': (0, 7375),
+        'interior_protein': (0, 4759)
+    }
+    min_threshold, max_threshold = thresholds.get(channel_name, (0, 3288))
 
     # Clip intensity values within the threshold range
     img_clipped = np.clip(img, min_threshold, max_threshold)
