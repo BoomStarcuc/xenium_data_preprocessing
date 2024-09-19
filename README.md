@@ -23,7 +23,7 @@ https://github.com/BoomStarcuc/xenium_data_preprocessing.git
 pip install -r requirement.txt
 ```
 
-## Cropping whole tissue images into individual cell images
+## Crop whole tissue images into individual cell images
 
 To run the algorithm on your data, use:
 
