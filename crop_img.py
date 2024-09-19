@@ -127,7 +127,7 @@ def main():
     used_lbl_channel = 1 # pick a label channel that corresponds to the image channel name you use
 
     # Output info
-    output_dir = "{}/preprocessing/{}".format(base_dir, lbl_channel_names[used_lbl_channel]) # modify to your output dir
+    output_dir = "{}/preprocessing/{}".format(base_dir, lbl_channel_names[used_lbl_channel])
     
     print("output_dir:", output_dir)
     if not os.path.exists(output_dir):
