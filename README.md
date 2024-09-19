@@ -14,7 +14,7 @@ conda activate xenium_dp
 2. Clone the repository, use:
 
 ``` 
-https://github.com/BoomStarcuc/xenium_data_preprocessing.git
+git clone https://github.com/BoomStarcuc/xenium_data_preprocessing.git
 ```
 
 3. Install dependencies, use:
