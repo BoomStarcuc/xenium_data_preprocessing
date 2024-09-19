@@ -17,6 +17,11 @@ def open_zarr(path: str) -> zarr.Group:
 # For example, use the above function to open the cells Zarr file, which contains segmentation mask Zarr arrays
 mask_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE"
 output_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE/preprocessing/labels"
+
+print("output_dir:", output_dir)
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+    
 root = open_zarr("{}/cells.zarr.zip".format(mask_dir))
 
 '''
