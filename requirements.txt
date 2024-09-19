@@ -5,3 +5,4 @@ scipy
 matplotlib
 tifffile
 zarr
+imagecodecs
