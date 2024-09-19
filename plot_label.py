@@ -60,7 +60,7 @@ def visualization(img_file, lbl_file, output):
     cv2.imwrite(output, new_image)
 
 base_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE/preprocessing"
-output_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE/preprocessing/visualization"
+output_dir = "{}/visualization".format(base_dir)
 print("output_dir:", output_dir)
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
