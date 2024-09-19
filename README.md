@@ -73,4 +73,7 @@ To verify if the image correctly aligns with the corresponding segmentation afte
 python plot_label.py
 ```
 
-where ```base_dir``` and ```output_dir``` need to be modified to your corresponding paths. Please also designate specific ```image name``` and ```label name```.
+where 
+
+- ```base_dir``` needs to be modified to your corresponding path.
+- ```image_file``` and ```label_file``` need to be checked if it is consistent with your output directory and name.
