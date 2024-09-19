@@ -59,7 +59,7 @@ To generate the label of cell and nuclei, use:
 python read_label.py
 ```
 
-where ```mask_dir``` and ```output_dir``` need to be modified to your corresponding paths. The data structure of the segmentation mask can be checked in the provided xenium document.
+where ```mask_dir``` needs to be modified to your corresponding paths. The data structure of the segmentation mask can be checked in the Xenium document.
 
 
 ## Plot segmentation boundary in the corresponding image
@@ -70,4 +70,4 @@ To verify if the image correctly aligns with the corresponding segmentation afte
 python plot_label.py
 ```
 
-where ```base_dir``` and '''output_dir''' need to be modified to your corresponding paths. Please also designate specific ```image name``` and ```label name```.
+where ```base_dir``` and ```output_dir``` need to be modified to your corresponding paths. Please also designate specific ```image name``` and ```label name```.
