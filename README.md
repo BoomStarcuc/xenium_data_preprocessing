@@ -11,14 +11,22 @@ conda create -n xenium_dp python=3.9
 conda activate xenium_dp
 ```
 
-3. Clone the repository, use:
+2. Clone the repository, use:
 
 ``` 
 https://github.com/BoomStarcuc/xenium_data_preprocessing.git
 ```
 
-4. Install dependencies, use:
+3. Install dependencies, use:
 
 ```
 pip install -r requirement.txt
+```
+
+## Cropping whole tissue images into individual cell images
+
+To run the algorithm on your data, use:
+
+```
+python crop_img.py
 ```
