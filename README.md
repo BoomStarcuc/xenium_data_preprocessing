@@ -14,7 +14,7 @@ conda activate xenium_dp
 3. Clone the repository, use:
 
 ``` 
-git clone https://github.com/BoomStarcuc/GeneSegNet.git
+https://github.com/BoomStarcuc/xenium_data_preprocessing.git
 ```
 
 4. Install dependencies, use:
