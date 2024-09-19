@@ -20,7 +20,7 @@ git clone https://github.com/BoomStarcuc/xenium_data_preprocessing.git
 3. Install dependencies, use:
 
 ```
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 ## Crop whole tissue images into individual cell images
