@@ -1,7 +1,7 @@
 # Xenium_data_preprocessing
 
 ## Overview
-This repository was created for cropping whole tissue images into individual cell images with output including single-cell images at the original size, twice the size, and four times the size.
+This repository was created for cropping whole tissue images into individual cell images with output including single-cell images at the original size, 2x original size, and 4x original size.
 
 ## Installation
 1. Create conda environments, use:
