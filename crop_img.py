@@ -116,7 +116,7 @@ def main():
     
     # Image info
     img_dir = os.path.join(base_dir, "morphology_focus") 
-    img_name = "morphology_focus_0000.ome.tif" # # modify to image name you use (4 channels)
+    img_name = "morphology_focus_0000.ome.tif" # modify to image name you use (4 channels)
     img_channel_names = ['DAPI', 'boundary', 'interior_RNA', 'interior_protein'] # determin the channel names according to your image data
     uesed_img_channel = 1 # pick a channel that you want to crop
 
