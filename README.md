@@ -31,7 +31,11 @@ To run the algorithm on your data, use:
 python crop_img.py
 ```
 
-where ```img_dir```, ```img_name```, ```img_channel_names```, ```uesed_img_channel```, ```lbl_dir```, ```lbl_name```, and ```lbl_channel_names```, ```used_lbl_channel```, and ```output_dir``` in this ```crop_img.py``` need to be modified to your corresponding paths, names, and specific channel.
+where 
+
+- ```base_dir``` needs to be modified to your corresponding data path.
+- ```used_img_channel``` and ```used_lbl_channel``` are corresponding to each other and are adjustable parameters. For example, in our current example, channel 1 is cell segmentation, while channel 0 is nuclear segmentation.
+- ```img_name```, ```img_channel_names```, ```lbl_name```, and ```lbl_channel_names``` need to be checked if it is consistent with your used data. 
 
 ## Generate the image of each channel
 
