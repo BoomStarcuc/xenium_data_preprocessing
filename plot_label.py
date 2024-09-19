@@ -2,9 +2,10 @@ import os
 import cv2
 import tifffile
 import numpy as np
+from PIL import Image
 import matplotlib.pyplot as plt
 from scipy.ndimage import find_objects, gaussian_filter, generate_binary_structure, label, maximum_filter1d, binary_fill_holes
-
+Image.MAX_IMAGE_PIXELS = None
 
 def masks_to_outlines(masks):
     """ get outlines of masks as a 0-1 array 
@@ -43,7 +44,8 @@ def masks_to_outlines(masks):
         return outlines
 
 def visualization(img_file, lbl_file, output):
-    image = cv2.imread(img_file, -1)
+    img = Image.open(img_file)
+    image = np.array(img)
     print("img info:", image.shape, image.dtype, image.max(), image.min())
 
     lbl = tifffile.imread(lbl_file)
