@@ -31,7 +31,7 @@ To run the algorithm on your data, use:
 python crop_img.py
 ```
 
-where ```img_dir```, ```img_name```, ```img_channel_names```, ```uesed_img_channel```, ```lbl_dir```, ```lbl_name```, and ```lbl_channel_names```, ```used_lbl_channel```, and '''output_dir''' in this ```crop_img.py``` need to be modified to your corresponding paths, names, and specific channel.
+where ```img_dir```, ```img_name```, ```img_channel_names```, ```uesed_img_channel```, ```lbl_dir```, ```lbl_name```, and ```lbl_channel_names```, ```used_lbl_channel```, and ```output_dir``` in this ```crop_img.py``` need to be modified to your corresponding paths, names, and specific channel.
 
 ## Generate the image of each channel
 
@@ -41,7 +41,7 @@ To generate the image of each channel, use:
 python read_tiff.py
 ```
 
-where ```img_dir```, ```img_name```, ```img_channel_names```, and '''output_dir''' need to be modified to your corresponding paths and image and channel names. The output format is '''.png''' file.
+where ```img_dir```, ```img_name```, ```img_channel_names```, and ```output_dir``` need to be modified to your corresponding paths and image and channel names. The output format is ```.png```file.
 
 ## Generate the label of cell and nuclei
 
@@ -51,4 +51,15 @@ To generate the label of cell and nuclei, use:
 python read_label.py
 ```
 
-where ```img_dir```, ```img_name```, ```img_channel_names```, and '''output_dir''' need to be modified to your corresponding paths and image and channel names. The output format is '''.png''' file.
+where ```mask_dir``` and ```output_dir``` need to be modified to your corresponding paths. The data structure of the segmentation mask can be checked in the provided xenium document.
+
+
+## Plot segmentation boundary in the corresponding image
+
+To verify if the image correctly aligns with the corresponding segmentation after generating the image and label separately, use:
+
+```
+python plot_label.py
+```
+
+where ```base_dir``` and '''output_dir''' need to be modified to your corresponding paths. Please also designate specific ```image name``` and ```label name```.
