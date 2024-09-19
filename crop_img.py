@@ -12,14 +12,14 @@ def open_zarr(path: str) -> zarr.Group:
     return zarr.group(store=store)
 
 def img_sharp(img, channel_name):
-    # Define thresholds for each channel
+    # Define thresholds for each channel, which is defined based on Xenium Explorer 2 software 
     thresholds = {
         'DAPI': (0, 3288),
         'boundary': (0, 5783),
         'interior_RNA': (0, 7375),
         'interior_protein': (0, 4759)
     }
-    min_threshold, max_threshold = thresholds.get(channel_name, (0, 4759))
+    min_threshold, max_threshold = thresholds.get(channel_name, (0, 3288))
 
     # Clip intensity values within the threshold range
     img_clipped = np.clip(img, min_threshold, max_threshold)
