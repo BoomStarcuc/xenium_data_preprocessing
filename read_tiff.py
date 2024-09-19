@@ -33,9 +33,10 @@ def img_sharp(img, channel_name):
     return img_gamma_corrected
 
 
-img_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE/morphology_focus"
+base_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE"
+img_dir = os.path.join(base_dir, "morphology_focus")
 img_name = "morphology_focus_0000.ome.tif" # These four images, including "morphology_focus_0000.ome.tif", "morphology_focus_0001.ome.tif", morphology_focus_0002.ome.tif, and morphology_focus_0003.ome.tif, are the same with four channels 'DAPI', 'boundary', 'interior_RNA', and 'interior_protein'
-output_dir = "/hpc/group/jilab/yw564/XeniumData/Xenium_human_Pancreas_FFPE/preprocessing/images"
+output_dir = "{}/preprocessing/images".format(base_dir)
 channel_names = ['DAPI', 'boundary', 'interior_RNA', 'interior_protein']
 
 print("output_dir:", output_dir)
