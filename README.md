@@ -35,7 +35,7 @@ where
 
 - ```base_dir``` needs to be modified to your corresponding data path.
 - ```used_img_channel``` and ```used_lbl_channel``` are corresponding to each other and are adjustable parameters. For example, in our current example, channel 1 is cell segmentation, while channel 0 is nuclear segmentation.
-- ```img_name```, ```img_channel_names```, ```lbl_name```, and ```lbl_channel_names``` need to be checked if it is consistent with your used data. 
+- ```img_dir```, ```img_name```, ```img_channel_names```, ```lbl_name```, and ```lbl_channel_names``` need to be checked if it is consistent with your used data. 
 
 ## Generate the image of each channel
 
@@ -45,7 +45,11 @@ To generate the image of each channel, use:
 python read_tiff.py
 ```
 
-where ```img_dir```, ```img_name```, ```img_channel_names```, and ```output_dir``` need to be modified to your corresponding paths and image and channel names. The output format is ```.png```file.
+where 
+
+- ```base_dir``` needs to be modified to your corresponding data path.
+- ```img_dir```, ```img_name``` and ```channel_names``` need to be checked if it is consistent with your used data.
+- The final output is ```.png``` file.
 
 ## Generate the label of cell and nuclei
 
